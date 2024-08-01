@@ -37,10 +37,29 @@ This is a web application built with Python and Flask that allows users to uploa
     pip install -r requirements.txt
     ```
 
-    To use a specific language:
+
+    To use a different language model:
     - Download the desired model from [Vosk Models](https://alphacephei.com/vosk/models)
     - Extract the model to the `kaldi/` directory
-    - Update the model path in `app.py` to point to the new model directory
+    - Rename the extracted folder to your preferred name, e.g., `your_language_model_folder`
+    - Update the `transcribe_file()` function in `app.py` to point to the new model directory. Replace `your_language_model_folder` with the name of the new model folder.
+
+    Example update for `transcribe_file()` function:
+    ```python
+    
+    def transcribe_file(filepath):
+        # Specify the name of the folder containing your language model
+        model_folder = "your_language_model_folder"
+        model_path = os.path.abspath(f'kaldi/{model_folder}')
+        
+        # Path to the Python executable in the virtual environment
+        venv_python = os.path.abspath('.venv/Scripts/python.exe')
+        
+        # Path to the transcription script
+        script_path = os.path.abspath('kaldi/transcribe.py')
+        
+        # Your transcription logic here
+    ```
 
 ## Usage
 
