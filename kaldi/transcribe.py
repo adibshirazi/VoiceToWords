@@ -1,4 +1,3 @@
-
 """Transcribes audio files with Vosk (https://alphacephei.com/vosk)"""
 import argparse
 import json
