@@ -1,21 +1,21 @@
 # Audio Transcription Web App
 
-This is a web application built with Python and Flask that allows users to upload audio files and transcribe them using the Vosk speech recognition model. The app is designed to handle Farsi (Persian) audio, but can be adapted for other languages.
+This is a web application built with Python and Flask that allows users to upload audio files and transcribe them using the Vosk speech recognition model. The app is designed to handle audio in multiple languages, with support for easy adaptation to different languages.
 
 ## Features
 
 - **Web Interface**: Users can easily upload audio files through a user-friendly web interface.
 - **File Support**: Supports .wav and .mp3 audio formats.
 - **Speech Recognition**: Uses Vosk for accurate speech-to-text conversion.
-- **Language Support**: Currently designed for Farsi (Persian) language transcription.
+- **Language Support**: Designed to be adaptable for various languages.
 - **Easy Deployment**: Simple setup and deployment process.
 
 ## Installation
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/adibshirazi/VoiceToWordsFa.git
-    cd VoiceToWordsFa
+    git clone https://github.com/adibshirazi/VoiceToWords.git
+    cd VoiceToWords
     ```
 
 2. **Set up a virtual environment**:
@@ -24,11 +24,11 @@ This is a web application built with Python and Flask that allows users to uploa
     ```
     Activate the virtual environment:
     - On Windows:
-      ```
+      ```sh
       .venv\Scripts\activate
       ```
     - On macOS and Linux:
-      ```
+      ```sh
       source .venv/bin/activate
       ```
 
@@ -37,14 +37,11 @@ This is a web application built with Python and Flask that allows users to uploa
     pip install -r requirements.txt
     ```
 
-4. **Vosk Model**:
-    The repository includes the Vosk model for Farsi (Persian) in the `kaldi/vosk-model-fa-0.5` directory.
-
-    To use a different language model:
+    To use a specific language:
     - Download the desired model from [Vosk Models](https://alphacephei.com/vosk/models)
     - Extract the model to the `kaldi/` directory
     - Update the model path in `app.py` to point to the new model directory
-   
+
 ## Usage
 
 1. **Run the application**:
@@ -92,7 +89,7 @@ Key features of Vosk:
    - The audio is converted to the required format for Vosk (16-bit PCM).
 
 4. **Speech Recognition**:
-   - The Vosk model (pre-trained for Farsi) is loaded.
+   - The Vosk model is loaded.
    - The audio data is passed through the Vosk recognizer.
    - The recognizer converts speech to text.
 
@@ -103,7 +100,7 @@ Key features of Vosk:
 6. **Display**:
    - The Flask app renders the result on the web page for the user to view.
 
-This process allows for efficient, offline transcription of Farsi audio files, with the potential to expand to other languages by changing the Vosk model.
+This process allows for efficient, offline transcription of audio files, with the potential to expand to other languages by changing the Vosk model.
 
 ## License
 
