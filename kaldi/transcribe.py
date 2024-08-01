@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """Transcribes audio files with Vosk (https://alphacephei.com/vosk)"""
 import argparse
 import json
