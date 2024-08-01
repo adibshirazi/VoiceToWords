@@ -57,8 +57,6 @@ This is a web application built with Python and Flask that allows users to uploa
         
         # Path to the transcription script
         script_path = os.path.abspath('kaldi/transcribe.py')
-        
-        # Your transcription logic here
     ```
 
 ## Usage
